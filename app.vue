@@ -25,6 +25,12 @@
       >
         WebSocket
       </button>
+      <button 
+        :class="{ active: currentLesson === 'eventloop' }"
+        @click="currentLesson = 'eventloop'"
+      >
+        Event Loop
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -32,6 +38,7 @@
       <CollectionsDemo v-if="currentLesson === 'collections'" />
       <ArraysWorkshop v-if="currentLesson === 'arrays'" />
       <WebSocketDemo v-if="currentLesson === 'websocket'" />
+      <EventLoopExplorer v-if="currentLesson === 'eventloop'" />
     </div>
   </div>
 </template>
@@ -42,6 +49,7 @@ import LifecycleDemo from './components/LifecycleDemo.vue';
 import CollectionsDemo from './components/CollectionsDemo.vue';
 import ArraysWorkshop from './components/ArraysWorkshop.vue';
 import WebSocketDemo from './components/WebSocketDemo.vue';
+import EventLoopExplorer from './components/EventLoopExplorer.vue';
 
 const currentLesson = ref('lifecycle');
 </script>
@@ -59,6 +67,7 @@ const currentLesson = ref('lifecycle');
   justify-content: center;
   gap: 20px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .lesson-navigation button {
@@ -71,10 +80,16 @@ const currentLesson = ref('lifecycle');
   transition: all 0.3s;
 }
 
+.lesson-navigation button:hover {
+  background: #eaeaea;
+  transform: translateY(-2px);
+}
+
 .lesson-navigation button.active {
   background: #34495e;
   color: white;
   border-color: #34495e;
+  box-shadow: 0 4px 6px rgba(52, 73, 94, 0.2);
 }
 
 .lesson-content {
@@ -83,5 +98,28 @@ const currentLesson = ref('lifecycle');
   padding: 20px;
   background: #fff;
   min-height: 500px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+  .lesson-navigation {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .lesson-navigation button {
+    margin-bottom: 10px;
+  }
+  
+  .lesson-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-container {
+    padding: 10px;
+  }
 }
 </style>
