@@ -19,12 +19,19 @@
       >
         Работа с массивами
       </button>
+      <button 
+        :class="{ active: currentLesson === 'websocket' }"
+        @click="currentLesson = 'websocket'"
+      >
+        WebSocket
+      </button>
     </div>
     
     <div class="lesson-content">
       <LifecycleDemo v-if="currentLesson === 'lifecycle'" />
       <CollectionsDemo v-if="currentLesson === 'collections'" />
       <ArraysWorkshop v-if="currentLesson === 'arrays'" />
+      <WebSocketDemo v-if="currentLesson === 'websocket'" />
     </div>
   </div>
 </template>
@@ -34,6 +41,7 @@ import { ref } from 'vue';
 import LifecycleDemo from './components/LifecycleDemo.vue';
 import CollectionsDemo from './components/CollectionsDemo.vue';
 import ArraysWorkshop from './components/ArraysWorkshop.vue';
+import WebSocketDemo from './components/WebSocketDemo.vue';
 
 const currentLesson = ref('lifecycle');
 </script>
