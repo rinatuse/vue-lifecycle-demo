@@ -31,6 +31,12 @@
       >
         Event Loop
       </button>
+      <button 
+        :class="{ active: currentLesson === 'rendering' }"
+        @click="currentLesson = 'rendering'"
+      >
+        BrowserRenderingCycle
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -39,6 +45,7 @@
       <ArraysWorkshop v-if="currentLesson === 'arrays'" />
       <WebSocketDemo v-if="currentLesson === 'websocket'" />
       <EventLoopExplorer v-if="currentLesson === 'eventloop'" />
+      <BrowserRenderingCycle v-if="currentLesson === 'rendering'"/>
     </div>
   </div>
 </template>
@@ -50,6 +57,8 @@ import CollectionsDemo from './components/CollectionsDemo.vue';
 import ArraysWorkshop from './components/ArraysWorkshop.vue';
 import WebSocketDemo from './components/WebSocketDemo.vue';
 import EventLoopExplorer from './components/EventLoopExplorer.vue';
+import BrowserRenderingCycle from './components/BrowserRenderingCycle.vue';
+
 
 const currentLesson = ref('lifecycle');
 </script>
