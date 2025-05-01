@@ -43,6 +43,12 @@
       >
         AlgorithmsDemo
       </button>
+      <button 
+        :class="{ active: currentLesson === 'enum' }"
+        @click="currentLesson = 'enum'"
+      >
+      Перегрузка функций Const Enum
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -53,6 +59,7 @@
       <EventLoopExplorer v-if="currentLesson === 'eventloop'" />
       <BrowserRenderingCycle v-if="currentLesson === 'rendering'"/>
       <AlgorithmsDemo v-if="currentLesson === 'algorithms'"/>
+      <ConstEnum v-if="currentLesson === 'enum'"/>
     </div>
   </div>
 </template>
@@ -66,6 +73,7 @@ import WebSocketDemo from './components/WebSocketDemo.vue';
 import EventLoopExplorer from './components/EventLoopExplorer.vue';
 import BrowserRenderingCycle from './components/BrowserRenderingCycle.vue';
 import AlgorithmsDemo from './components/AlgorithmsDemo.vue';
+import ConstEnum from './components/ConstEnum.vue';
 
 
 const currentLesson = ref('lifecycle');
