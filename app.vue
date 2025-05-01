@@ -49,6 +49,12 @@
       >
       Перегрузка функций Const Enum
       </button>
+      <button 
+        :class="{ active: currentLesson === 'this' }"
+        @click="currentLesson = 'this'"
+      >
+      This
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -60,6 +66,7 @@
       <BrowserRenderingCycle v-if="currentLesson === 'rendering'"/>
       <AlgorithmsDemo v-if="currentLesson === 'algorithms'"/>
       <ConstEnum v-if="currentLesson === 'enum'"/>
+      <ThisDemo v-if="currentLesson === 'this'" />
     </div>
   </div>
 </template>
@@ -74,6 +81,7 @@ import EventLoopExplorer from './components/EventLoopExplorer.vue';
 import BrowserRenderingCycle from './components/BrowserRenderingCycle.vue';
 import AlgorithmsDemo from './components/AlgorithmsDemo.vue';
 import ConstEnum from './components/ConstEnum.vue';
+import ThisDemo from './components/ThisDemo.vue';
 
 
 const currentLesson = ref('lifecycle');
