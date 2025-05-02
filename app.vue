@@ -97,6 +97,24 @@
       >
       hasownvsin
       </button>
+      <button 
+        :class="{ active: currentLesson === 'freezedescription' }"
+        @click="currentLesson = 'freezedescription'"
+      >
+      freezedescription
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'recursionexplorer' }"
+        @click="currentLesson = 'recursionexplorer'"
+      >
+      recursionexplorer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'supersubtypedemo' }"
+        @click="currentLesson = 'supersubtypedemo'"
+      >
+      supersubtypedemo
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -116,6 +134,9 @@
       <AsyncDeferDemo v-if="currentLesson === 'asyncdefer'" />
       <ArrowFunctionsDemo v-if="currentLesson === 'arrowfunction'" />
       <HasOwnVsIn v-if="currentLesson === 'hasownvsin'" />
+      <ObjectFreezeDescriptors v-if="currentLesson === 'freezedescription'" />
+      <RecursionExplorer v-if="currentLesson === 'recursionexplorer'" />
+      <SuperSubTypeDemo v-if="currentLesson === 'supersubtypedemo'" />
     </div>
   </div>
 </template>
@@ -138,6 +159,9 @@ import JSProblemSolver from './components/JSProblemSolver.vue';
 import AsyncDeferDemo from './components/AsyncDeferDemo.vue';
 import ArrowFunctionsDemo from './components/ArrowFunctionsDemo.vue';
 import HasOwnVsIn from './components/HasOwnVsIn.vue';
+import ObjectFreezeDescriptors from './components/ObjectFreezeDescriptors.vue';
+import RecursionExplorer from './components/RecursionExplorer.vue';
+import SuperSubTypeDemo from './components/SuperSubTypeDemo.vue';
 
 const currentLesson = ref('lifecycle');
 </script>
