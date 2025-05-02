@@ -38,12 +38,6 @@
         BrowserRenderingCycle
       </button>
       <button 
-        :class="{ active: currentLesson === 'algorithms' }"
-        @click="currentLesson = 'algorithms'"
-      >
-        AlgorithmsDemo
-      </button>
-      <button 
         :class="{ active: currentLesson === 'enum' }"
         @click="currentLesson = 'enum'"
       >
@@ -112,7 +106,6 @@
       <WebSocketDemo v-if="currentLesson === 'websocket'" />
       <EventLoopExplorer v-if="currentLesson === 'eventloop'" />
       <BrowserRenderingCycle v-if="currentLesson === 'rendering'"/>
-      <AlgorithmsDemo v-if="currentLesson === 'algorithms'"/>
       <ConstEnum v-if="currentLesson === 'enum'"/>
       <ThisDemo v-if="currentLesson === 'this'" />
       <ThisJSTutorial v-if="currentLesson === 'mur'" />
@@ -135,7 +128,6 @@ import ArraysWorkshop from './components/ArraysWorkshop.vue';
 import WebSocketDemo from './components/WebSocketDemo.vue';
 import EventLoopExplorer from './components/EventLoopExplorer.vue';
 import BrowserRenderingCycle from './components/BrowserRenderingCycle.vue';
-import AlgorithmsDemo from './components/AlgorithmsDemo.vue';
 import ConstEnum from './components/ConstEnum.vue';
 import ThisDemo from './components/ThisDemo.vue';
 import ThisJSTutorial from './components/ThisJSTutorial.vue';
