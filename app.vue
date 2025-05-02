@@ -115,6 +115,12 @@
       >
       supersubtypedemo
       </button>
+      <button 
+        :class="{ active: currentLesson === 'sobesdemo' }"
+        @click="currentLesson = 'sobesdemo'"
+      >
+      supersubtypedemo
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -137,6 +143,8 @@
       <ObjectFreezeDescriptors v-if="currentLesson === 'freezedescription'" />
       <RecursionExplorer v-if="currentLesson === 'recursionexplorer'" />
       <SuperSubTypeDemo v-if="currentLesson === 'supersubtypedemo'" />
+      <SobesDemo v-if="currentLesson === 'sobesdemo'" />
+      
     </div>
   </div>
 </template>
@@ -162,6 +170,7 @@ import HasOwnVsIn from './components/HasOwnVsIn.vue';
 import ObjectFreezeDescriptors from './components/ObjectFreezeDescriptors.vue';
 import RecursionExplorer from './components/RecursionExplorer.vue';
 import SuperSubTypeDemo from './components/SuperSubTypeDemo.vue';
+import SobesDemo from './components/SobesDemo.vue';
 
 const currentLesson = ref('lifecycle');
 </script>
