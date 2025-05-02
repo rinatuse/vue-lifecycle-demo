@@ -80,7 +80,7 @@
       <ConstEnum v-if="currentLesson === 'enum'"/>
       <ThisDemo v-if="currentLesson === 'this'" />
       <ThisJSTutorial v-if="currentLesson === 'mur'" />
-      <Generic v-if="currentLesson === 'generic'" />
+      <GenericDemo v-if="currentLesson === 'generic'" />
     </div>
   </div>
 </template>
@@ -97,7 +97,7 @@ import AlgorithmsDemo from './components/AlgorithmsDemo.vue';
 import ConstEnum from './components/ConstEnum.vue';
 import ThisDemo from './components/ThisDemo.vue';
 import ThisJSTutorial from './components/ThisJSTutorial.vue';
-import Generic from './components/Generic.vue';
+import GenericDemo from './components/GenericDemo.vue';
 
 
 const currentLesson = ref('lifecycle');

@@ -815,7 +815,7 @@
     const count = ref(initial);
     
     function increment() {
-      if (count.value < max) {
+      if (count.value &lt; max) {
         count.value++;
       }
     }
@@ -905,7 +905,7 @@
     const id = parseInt(getRouterParam(event, 'id') || '0');
     
     // Проверка типа
-    if (isNaN(id) || id <= 0) {
+    if (isNaN(id) || id &lt;= 0) {
       throw createError({
         statusCode: 400,
         message: 'Invalid user ID'
@@ -1626,8 +1626,8 @@
   }
   
   interface UseCartReturn {
-    items: Ref&lt;CartItem[]&dt;;
-    totalPrice: ComputedRef&lt;number&dt;;
+    items: Ref&lt;CartItem[]&gt;;
+    totalPrice: ComputedRef&lt;number&gt;;
     addToCart: (product: Product, quantity: number) => void;
     removeFromCart: (productId: number) => void;
     clearCart: () => void;
@@ -1635,8 +1635,8 @@
   
   export function useCart(): UseCartReturn {
     // Состояние корзины
-    const items = ref&lt;CartItem[]&dt;([]);
-    const totalPrice = computed&lt;number&dt;(() => {
+    const items = ref&lt;CartItem[]&gt;([]);
+    const totalPrice = computed&lt;number&gt;(() => {
       // Расчет общей стоимости
       return items.value.reduce((total, item) => {
         return total + item.product.price * item.quantity;
@@ -1759,7 +1759,7 @@
   ];
   
   // GET /api/users/:id
-  export const GET = defineEventHandler&lt;User&dt;(async (event) => {
+  export const GET = defineEventHandler&lt;User&gt;(async (event) => {
     const id = parseInt(getRouterParam(event, 'id') || '0');
     
     if (isNaN(id) || id <= 0) {
@@ -1783,8 +1783,8 @@
   });
   
   // POST /api/users
-  export const POST = defineEventHandler&lt;User&dt;(async (event) => {
-    const body = await readBody&lt;CreateUserRequest&dt;(event);
+  export const POST = defineEventHandler&lt;User&gt;(async (event) => {
+    const body = await readBody&lt;CreateUserRequest&gt;(event);
     
     // Валидация данных
     if (!body.name || !body.email || !body.password) {
@@ -1810,7 +1810,7 @@
   });
   
   // PUT /api/users/:id
-  export const PUT = defineEventHandler&lt;User&dt;(async (event) => {
+  export const PUT = defineEventHandler&lt;User&gt;(async (event) => {
     const id = parseInt(getRouterParam(event, 'id') || '0');
     
     if (isNaN(id) || id <= 0) {
@@ -1820,7 +1820,7 @@
       });
     }
     
-    const body = await readBody&lt;UpdateUserRequest&dt;(event);
+    const body = await readBody&lt;UpdateUserRequest&gt;(event);
     
     // Валидация данных
     if (Object.keys(body).length === 0) {
