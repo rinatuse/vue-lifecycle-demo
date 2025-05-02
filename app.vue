@@ -85,6 +85,24 @@
       >
       jsproblem
       </button>
+      <button 
+        :class="{ active: currentLesson === 'asyncdefer' }"
+        @click="currentLesson = 'asyncdefer'"
+      >
+      asyncdefer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'arrowfunction' }"
+        @click="currentLesson = 'arrowfunction'"
+      >
+      arrowfunction
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'hasownvsin' }"
+        @click="currentLesson = 'hasownvsin'"
+      >
+      hasownvsin
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -102,6 +120,9 @@
       <ObjectCopyDemo v-if="currentLesson === 'objectfive'" />
       <PromiseExplorer v-if="currentLesson === 'promise'" />
       <JSProblemSolver v-if="currentLesson === 'jsproblem'" />
+      <AsyncDeferDemo v-if="currentLesson === 'asyncdefer'" />
+      <ArrowFunctionsDemo v-if="currentLesson === 'arrowfunction'" />
+      <HasOwnVsIn v-if="currentLesson === 'hasownvsin'" />
     </div>
   </div>
 </template>
@@ -122,6 +143,9 @@ import GenericDemo from './components/GenericDemo.vue';
 import ObjectCopyDemo from './components/ObjectCopyDemo.vue';
 import PromiseExplorer from './components/PromiseExplorer.vue';
 import JSProblemSolver from './components/JSProblemSolver.vue';
+import AsyncDeferDemo from './components/AsyncDeferDemo.vue';
+import ArrowFunctionsDemo from './components/ArrowFunctionsDemo.vue';
+import HasOwnVsIn from './components/HasOwnVsIn.vue';
 
 const currentLesson = ref('lifecycle');
 </script>
