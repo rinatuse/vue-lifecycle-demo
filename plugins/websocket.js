@@ -1,7 +1,7 @@
 // plugins/websocket.js
-import { ref, onUnmounted } from 'vue'
+import { ref } from 'vue'
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(() => {
   // Состояние WebSocket для всего приложения
   const webSocket = ref(null)
   const isConnected = ref(false)
@@ -114,13 +114,6 @@ export default defineNuxtPlugin((nuxtApp) => {
     if (webSocket.value) {
       webSocket.value.close()
     }
-  }
-  
-  // Очистка при размонтировании приложения
-  if (process.client) {
-    nuxtApp.hook('app:unmounted', () => {
-      disconnect()
-    })
   }
   
   // Предоставляем API для компонентов
