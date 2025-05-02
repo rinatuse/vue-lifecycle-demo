@@ -119,7 +119,19 @@
         :class="{ active: currentLesson === 'sobesdemo' }"
         @click="currentLesson = 'sobesdemo'"
       >
-      supersubtypedemo
+      sobes
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'propsexplorer' }"
+        @click="currentLesson = 'propsexplorer'"
+      >
+      propsexplorer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'emitdemo' }"
+        @click="currentLesson = 'emitdemo'"
+      >
+      emitdemo
       </button>
     </div>
     
@@ -144,6 +156,8 @@
       <RecursionExplorer v-if="currentLesson === 'recursionexplorer'" />
       <SuperSubTypeDemo v-if="currentLesson === 'supersubtypedemo'" />
       <SobesDemo v-if="currentLesson === 'sobesdemo'" />
+      <PropsExplorer v-if="currentLesson === 'propsexplorer'" />
+      <EmitDemo v-if="currentLesson === 'emitdemo'" />
       
     </div>
   </div>
@@ -171,7 +185,8 @@ import ObjectFreezeDescriptors from './components/ObjectFreezeDescriptors.vue';
 import RecursionExplorer from './components/RecursionExplorer.vue';
 import SuperSubTypeDemo from './components/SuperSubTypeDemo.vue';
 import SobesDemo from './components/SobesDemo.vue';
-
+import PropsExplorer from './components/PropsExplorer.vue';
+import EmitDemo from './components/EmitDemo.vue';
 const currentLesson = ref('lifecycle');
 </script>
 
