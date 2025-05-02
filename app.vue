@@ -79,6 +79,12 @@
       >
       promise
       </button>
+      <button 
+        :class="{ active: currentLesson === 'jsproblem' }"
+        @click="currentLesson = 'jsproblem'"
+      >
+      jsproblem
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -95,6 +101,7 @@
       <GenericDemo v-if="currentLesson === 'generic'" />
       <ObjectCopyDemo v-if="currentLesson === 'objectfive'" />
       <PromiseExplorer v-if="currentLesson === 'promise'" />
+      <JSProblemSolver v-if="currentLesson === 'jsproblem'" />
     </div>
   </div>
 </template>
@@ -114,6 +121,7 @@ import ThisJSTutorial from './components/ThisJSTutorial.vue';
 import GenericDemo from './components/GenericDemo.vue';
 import ObjectCopyDemo from './components/ObjectCopyDemo.vue';
 import PromiseExplorer from './components/PromiseExplorer.vue';
+import JSProblemSolver from './components/JSProblemSolver.vue';
 
 const currentLesson = ref('lifecycle');
 </script>
