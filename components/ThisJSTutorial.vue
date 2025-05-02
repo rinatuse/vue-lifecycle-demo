@@ -263,7 +263,8 @@
         <div 
           class="progress-indicator" 
           :style="{ width: `${(currentSection + 1) * (100 / sections.length)}%` }"
-        ></div>
+        >
+      </div>
       </div>
     </div>
   </template>

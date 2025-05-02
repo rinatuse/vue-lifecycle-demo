@@ -73,6 +73,12 @@
       >
       objectfive
       </button>
+      <button 
+        :class="{ active: currentLesson === 'promise' }"
+        @click="currentLesson = 'promise'"
+      >
+      promise
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -88,6 +94,7 @@
       <ThisJSTutorial v-if="currentLesson === 'mur'" />
       <GenericDemo v-if="currentLesson === 'generic'" />
       <ObjectCopyDemo v-if="currentLesson === 'objectfive'" />
+      <PromiseExplorer v-if="currentLesson === 'promise'" />
     </div>
   </div>
 </template>
@@ -106,6 +113,7 @@ import ThisDemo from './components/ThisDemo.vue';
 import ThisJSTutorial from './components/ThisJSTutorial.vue';
 import GenericDemo from './components/GenericDemo.vue';
 import ObjectCopyDemo from './components/ObjectCopyDemo.vue';
+import PromiseExplorer from './components/PromiseExplorer.vue';
 
 const currentLesson = ref('lifecycle');
 </script>
