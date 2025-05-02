@@ -67,6 +67,12 @@
       >
       Generic
       </button>
+      <button 
+        :class="{ active: currentLesson === 'objectfive' }"
+        @click="currentLesson = 'objectfive'"
+      >
+      objectfive
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -81,6 +87,7 @@
       <ThisDemo v-if="currentLesson === 'this'" />
       <ThisJSTutorial v-if="currentLesson === 'mur'" />
       <GenericDemo v-if="currentLesson === 'generic'" />
+      <ObjectCopyDemo v-if="currentLesson === 'objectfive'" />
     </div>
   </div>
 </template>
@@ -98,7 +105,7 @@ import ConstEnum from './components/ConstEnum.vue';
 import ThisDemo from './components/ThisDemo.vue';
 import ThisJSTutorial from './components/ThisJSTutorial.vue';
 import GenericDemo from './components/GenericDemo.vue';
-
+import ObjectCopyDemo from './components/ObjectCopyDemo.vue';
 
 const currentLesson = ref('lifecycle');
 </script>
