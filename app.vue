@@ -133,6 +133,54 @@
       >
       emitdemo
       </button>
+      <button 
+        :class="{ active: currentLesson === 'hotelbookingcalculator' }"
+        @click="currentLesson = 'hotelbookingcalculator'"
+      >
+      hotelbookingcalculator
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'arraygrouping' }"
+        @click="currentLesson = 'arraygrouping'"
+      >
+      arraygrouping
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'eventemitter' }"
+        @click="currentLesson = 'eventemitter'"
+      >
+      eventemitter
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'playergrouping' }"
+        @click="currentLesson = 'playergrouping'"
+      >
+      playergrouping
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'bind' }"
+        @click="currentLesson = 'bind'"
+      >
+      bind
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'mergesortedarrays' }"
+        @click="currentLesson = 'mergesortedarrays'"
+      >
+      mergesortedarrays
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'twosum' }"
+        @click="currentLesson = 'twosum'"
+      >
+      twosum
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'anagrmexplorer' }"
+        @click="currentLesson = 'anagrmexplorer'"
+      >
+      anagrmexplorer
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -158,6 +206,16 @@
       <SobesDemo v-if="currentLesson === 'sobesdemo'" />
       <PropsExplorer v-if="currentLesson === 'propsexplorer'" />
       <EmitDemo v-if="currentLesson === 'emitdemo'" />
+      <HotelBookingCalculator v-if="currentLesson === 'hotelbookingcalculator'" />
+      <ArrayGroupingDemo v-if="currentLesson === 'arraygrouping'" />
+      <EventEmitterDemo v-if="currentLesson === 'eventemitter'" />
+      <PlayerGroupingDemo v-if="currentLesson === 'playergrouping'" />
+      <BindDemo v-if="currentLesson === 'bind'" />
+      <MergeSortedArrays v-if="currentLesson === 'mergesortedarrays'" />
+      <TwoSum v-if="currentLesson === 'twosum'" />
+      <AnagrmExplorer v-if="currentLesson === 'anagrmexplorer'" />
+      
+      
       
     </div>
   </div>
@@ -187,6 +245,14 @@ import SuperSubTypeDemo from './components/SuperSubTypeDemo.vue';
 import SobesDemo from './components/SobesDemo.vue';
 import PropsExplorer from './components/PropsExplorer.vue';
 import EmitDemo from './components/EmitDemo.vue';
+import HotelBookingCalculator from './components/HotelBookingCalculator.vue';
+import ArrayGroupingDemo from './components/ArrayGroupingDemo.vue';
+import EventEmitterDemo from './components/EventEmitterDemo.vue';
+import PlayerGroupingDemo from './components/PlayerGroupingDemo.vue';
+import BindDemo from './components/BindDemo.vue';
+import MergeSortedArrays from './components/MergeSortedArrays.vue';
+import TwoSum from './components/TwoSum.vue';
+import AnagrmExplorer from './components/AnagrmExplorer.vue';
 const currentLesson = ref('lifecycle');
 </script>
 
