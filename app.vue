@@ -193,6 +193,24 @@
       >
       bracketsvalidator
       </button>
+      <button 
+        :class="{ active: currentLesson === 'algorstring' }"
+        @click="currentLesson = 'algorstring'"
+      >
+      algorstring
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'visualalgoritm' }"
+        @click="currentLesson = 'visualalgoritm'"
+      >
+      visualalgoritm
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'closuretimeouto' }"
+        @click="currentLesson = 'closuretimeouto'"
+      >
+      closuretimeouto
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -228,6 +246,9 @@
       <AnagrmExplorer v-if="currentLesson === 'anagrmexplorer'" />
       <ArrayDifferenceExplainer v-if="currentLesson === 'arraydifferenceexplainer'" />
       <BracketsValidator v-if="currentLesson === 'bracketsvalidator'" />
+      <AlgorString v-if="currentLesson === 'algorstring'" />
+      <VisualAlgoritm v-if="currentLesson === 'visualalgoritm'" />
+      <ClosureTimeoutDemo v-if="currentLesson === 'closuretimeouto'" />
       
       
       
@@ -269,6 +290,9 @@ import TwoSum from './components/TwoSum.vue';
 import AnagrmExplorer from './components/AnagrmExplorer.vue';
 import ArrayDifferenceExplainer from './components/ArrayDifferenceExplainer.vue';
 import BracketsValidator from './components/BracketsValidator.vue';
+import AlgorString from './components/AlgorString.vue';
+import VisualAlgoritm from './components/VisualAlgoritm.vue';
+import ClosureTimeoutDemo from './components/ClosureTimeoutDemo.vue';
 const currentLesson = ref('lifecycle');
 </script>
 
