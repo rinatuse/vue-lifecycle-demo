@@ -181,6 +181,18 @@
       >
       anagrmexplorer
       </button>
+      <button 
+        :class="{ active: currentLesson === 'arraydifferenceexplainer' }"
+        @click="currentLesson = 'arraydifferenceexplainer'"
+      >
+      arraydifferenceexplainer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'bracketsvalidator' }"
+        @click="currentLesson = 'bracketsvalidator'"
+      >
+      bracketsvalidator
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -214,6 +226,8 @@
       <MergeSortedArrays v-if="currentLesson === 'mergesortedarrays'" />
       <TwoSum v-if="currentLesson === 'twosum'" />
       <AnagrmExplorer v-if="currentLesson === 'anagrmexplorer'" />
+      <ArrayDifferenceExplainer v-if="currentLesson === 'arraydifferenceexplainer'" />
+      <BracketsValidator v-if="currentLesson === 'bracketsvalidator'" />
       
       
       
@@ -253,6 +267,8 @@ import BindDemo from './components/BindDemo.vue';
 import MergeSortedArrays from './components/MergeSortedArrays.vue';
 import TwoSum from './components/TwoSum.vue';
 import AnagrmExplorer from './components/AnagrmExplorer.vue';
+import ArrayDifferenceExplainer from './components/ArrayDifferenceExplainer.vue';
+import BracketsValidator from './components/BracketsValidator.vue';
 const currentLesson = ref('lifecycle');
 </script>
 
