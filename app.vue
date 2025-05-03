@@ -241,6 +241,36 @@
       >
       custompromiseall
       </button>
+      <button 
+        :class="{ active: currentLesson === 'arraymethodsexplorer' }"
+        @click="currentLesson = 'arraymethodsexplorer'"
+      >
+      arraymethodsexplorer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'functionget' }"
+        @click="currentLesson = 'functionget'"
+      >
+      functionget
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'debounceexplorer' }"
+        @click="currentLesson = 'debounceexplorer'"
+      >
+      debounceexplorer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'fetchretry' }"
+        @click="currentLesson = 'fetchretry'"
+      >
+      fetchretry
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'amtalgorithmvisualization' }"
+        @click="currentLesson = 'amtalgorithmvisualization'"
+      >
+      amtalgorithmvisualization
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -284,6 +314,11 @@
       <AnagramGroupingVisualizer v-if="currentLesson === 'anagramgroupingvisualizer'" />
       <BracketsValidators v-if="currentLesson === 'bracketsvalidators'" />
       <CustomPromiseAll v-if="currentLesson === 'custompromiseall'" />
+      <ArrayMethodsExplorer v-if="currentLesson === 'arraymethodsexplorer'" />
+      <FunctionGet v-if="currentLesson === 'functionget'" />
+      <DebounceExplorer v-if="currentLesson === 'debounceexplorer'" />
+      <FetchRetry v-if="currentLesson === 'fetchretry'" />
+      <AMTAlgorithmVisualization v-if="currentLesson === 'amtalgorithmvisualization'" />
     </div>
   </div>
 </template>
@@ -330,6 +365,11 @@ import ArrayFlattenDemo from './components/ArrayFlattenDemo.vue';
 import AnagramGroupingVisualizer from './components/AnagramGroupingVisualizer.vue';
 import BracketsValidators from './components/BracketsValidators.vue';
 import CustomPromiseAll from './components/CustomPromiseAll.vue';
+import ArrayMethodsExplorer from './components/ArrayMethodsExplorer.vue';
+import FunctionGet from './components/FunctionGet.vue';
+import DebounceExplorer from './components/DebounceExplorer.vue';
+import FetchRetry from './components/FetchRetry.vue';
+import AMTAlgorithmVisualization from './components/AMTAlgorithmVisualization.vue';
 const currentLesson = ref('lifecycle');
 </script>
 
