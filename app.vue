@@ -211,6 +211,36 @@
       >
       closuretimeouto
       </button>
+      <button 
+        :class="{ active: currentLesson === 'memoization' }"
+        @click="currentLesson = 'memoization'"
+      >
+      memoization
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'arrayflatten' }"
+        @click="currentLesson = 'arrayflatten'"
+      >
+      arrayflatten
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'anagramgroupingvisualizer' }"
+        @click="currentLesson = 'anagramgroupingvisualizer'"
+      >
+      anagramgroupingvisualizer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'bracketsvalidators' }"
+        @click="currentLesson = 'bracketsvalidators'"
+      >
+      bracketsvalidators
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'custompromiseall' }"
+        @click="currentLesson = 'custompromiseall'"
+      >
+      custompromiseall
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -249,9 +279,11 @@
       <AlgorString v-if="currentLesson === 'algorstring'" />
       <VisualAlgoritm v-if="currentLesson === 'visualalgoritm'" />
       <ClosureTimeoutDemo v-if="currentLesson === 'closuretimeouto'" />
-      
-      
-      
+      <MemoizationDemo v-if="currentLesson === 'memoization'" />
+      <ArrayFlattenDemo v-if="currentLesson === 'arrayflatten'" />
+      <AnagramGroupingVisualizer v-if="currentLesson === 'anagramgroupingvisualizer'" />
+      <BracketsValidators v-if="currentLesson === 'bracketsvalidators'" />
+      <CustomPromiseAll v-if="currentLesson === 'custompromiseall'" />
     </div>
   </div>
 </template>
@@ -293,6 +325,11 @@ import BracketsValidator from './components/BracketsValidator.vue';
 import AlgorString from './components/AlgorString.vue';
 import VisualAlgoritm from './components/VisualAlgoritm.vue';
 import ClosureTimeoutDemo from './components/ClosureTimeoutDemo.vue';
+import MemoizationDemo from './components/MemoizationDemo.vue';
+import ArrayFlattenDemo from './components/ArrayFlattenDemo.vue';
+import AnagramGroupingVisualizer from './components/AnagramGroupingVisualizer.vue';
+import BracketsValidators from './components/BracketsValidators.vue';
+import CustomPromiseAll from './components/CustomPromiseAll.vue';
 const currentLesson = ref('lifecycle');
 </script>
 
