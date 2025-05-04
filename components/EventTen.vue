@@ -50,10 +50,10 @@
         
         <div v-if="showAnswer" class="answer-result">
           <div v-if="isCorrect" class="correct-answer">
-            Правильно! Порядок вывода: <strong>A, B, D, C, F, E</strong>
+            Правильно! Порядок вывода: <strong>A, B, D, F, C, E</strong>
           </div>
           <div v-else class="incorrect-answer">
-            Неправильно. Верный порядок: <strong>A, B, D, C, F, E</strong>
+            Неправильно. Верный порядок: <strong>A, B, D, F, C, E</strong>
           </div>
         </div>
       </div>
@@ -202,8 +202,8 @@
       return {
         options: [
           { value: 'A, B, C, D, E, F', correct: false },
-          { value: 'A, B, D, C, F, E', correct: true },
-          { value: 'A, B, D, F, C, E', correct: false },
+          { value: 'A, B, D, C, F, E', correct: false },
+          { value: 'A, B, D, F, C, E', correct: true },
           { value: 'A, B, E, D, C, F', correct: false }
         ],
         selectedOption: null,
@@ -416,8 +416,8 @@
     },
     computed: {
       // Вычисляемое свойство для проверки правильности ответа
-      isCorrects() {
-        return this.selectedOption === 'A, B, D, C, F, E';
+      isCorrect() {
+        return this.selectedOption === 'A, B, D, F, C, E';
       }
     },
     methods: {
