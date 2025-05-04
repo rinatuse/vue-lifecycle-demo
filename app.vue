@@ -355,6 +355,66 @@
       >
       eventten
       </button>
+      <button 
+        :class="{ active: currentLesson === 'eventlooppromise' }"
+        @click="currentLesson = 'eventlooppromise'"
+      >
+      eventlooppromise
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'flattenobjectdemo' }"
+        @click="currentLesson = 'flattenobjectdemo'"
+      >
+      flattenobjectdemo
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'recursivesumcomponent' }"
+        @click="currentLesson = 'recursivesumcomponent'"
+      >
+      recursivesumcomponent
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'treesumexplainer' }"
+        @click="currentLesson = 'treesumexplainer'"
+      >
+      treesumexplainer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'deepcopyexplorer' }"
+        @click="currentLesson = 'deepcopyexplorer'"
+      >
+      deepcopyexplorer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'fibonaccisolver' }"
+        @click="currentLesson = 'fibonaccisolver'"
+      >
+      fibonaccisolver
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'stringcompression' }"
+        @click="currentLesson = 'stringcompression'"
+      >
+      stringcompression
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'substringsearchDemo' }"
+        @click="currentLesson = 'substringsearchDemo'"
+      >
+      substringsearchDemo
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'capitalizedemo' }"
+        @click="currentLesson = 'capitalizedemo'"
+      >
+      capitalizedemo
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'stringdeduplicator' }"
+        @click="currentLesson = 'stringdeduplicator'"
+      >
+      stringdeduplicator
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -417,6 +477,17 @@
       <EventLoopFive v-if="currentLesson === 'eventloopfive'" />
       <EventLoopSeven v-if="currentLesson === 'eventloopseven'" />
       <EventTen v-if="currentLesson === 'eventten'" />
+      <EventLoopPromise v-if="currentLesson === 'eventlooppromise'" />
+      <FlattenObjectDemo v-if="currentLesson === 'flattenobjectdemo'" />
+      <RecursiveSumComponent v-if="currentLesson === 'recursivesumcomponent'" />
+      <TreeSumExplainer v-if="currentLesson === 'treesumexplainer'" />
+      <DeepCopyExplorer v-if="currentLesson === 'deepcopyexplorer'" />
+      <FibonacciSolver v-if="currentLesson === 'fibonaccisolver'" />
+      <StringCompression v-if="currentLesson === 'stringcompression'" />
+      <SubstringSearchDemo v-if="currentLesson === 'substringsearchDemo'" />
+      <CapitalizeDemo v-if="currentLesson === 'capitalizedemo'" />
+      <StringDeduplicator v-if="currentLesson === 'stringdeduplicator'" />
+
       
     </div>
   </div>
@@ -483,6 +554,16 @@ import EventLoopfrou from './components/EventLoopfrou.vue';
 import EventLoopFive from './components/EventLoopFive.vue';
 import EventLoopSeven from './components/EventLoopSeven.vue';
 import EventTen from './components/EventTen.vue';
+import EventLoopPromise from './components/EventLoopPromise.vue';
+import FlattenObjectDemo from './components/FlattenObjectDemo.vue';
+import RecursiveSumComponent from './components/RecursiveSumComponent.vue';
+import TreeSumExplainer from './components/TreeSumExplainer.vue';
+import DeepCopyExplorer from './components/DeepCopyExplorer.vue';
+import FibonacciSolver from './components/FibonacciSolver.vue';
+import StringCompression from './components/StringCompression.vue';
+import SubstringSearchDemo from './components/SubstringSearchDemo.vue';
+import CapitalizeDemo from './components/CapitalizeDemo.vue';
+import StringDeduplicator from './components/StringDeduplicator.vue';
 const currentLesson = ref('lifecycle');
 </script>
 
