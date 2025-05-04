@@ -24,7 +24,7 @@
   );</code></pre>
         </div>
         
-        <p>Ожидаемый результат: <code>["maskva", "mama", "algorithm"]</code></p>
+        <p>Ожидаемый результат: <code>["mama"]</code></p>
       </div>
       
       <div class="solution-container">
