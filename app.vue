@@ -271,6 +271,90 @@
       >
       amtalgorithmvisualization
       </button>
+      <button 
+        :class="{ active: currentLesson === 'thiscontext' }"
+        @click="currentLesson = 'thiscontext'"
+      >
+      thiscontext
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'protoinheitanceexplainer' }"
+        @click="currentLesson = 'protoinheitanceexplainer'"
+      >
+      protoinheitanceexplainer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'thiscontextexplorer' }"
+        @click="currentLesson = 'thiscontextexplorer'"
+      >
+      thiscontextexplorer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'thisisbind' }"
+        @click="currentLesson = 'thisisbind'"
+      >
+      thisisbind
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'thisprototypeposition' }"
+        @click="currentLesson = 'thisprototypeposition'"
+      >
+      thisprototypeposition
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'thiscontextjs' }"
+        @click="currentLesson = 'thiscontextjs'"
+      >
+      thiscontextjs
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'hasownpropertyvsinexplainer' }"
+        @click="currentLesson = 'hasownpropertyvsinexplainer'"
+      >
+      hasownpropertyvsinexplainer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'eventloops' }"
+        @click="currentLesson = 'eventloops'"
+      >
+      eventloops
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'eventloopexplainertwo' }"
+        @click="currentLesson = 'eventloopexplainertwo'"
+      >
+      eventloopexplainertwo
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'eventloopthree' }"
+        @click="currentLesson = 'eventloopthree'"
+      >
+      eventloopthree
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'eventloopfrou' }"
+        @click="currentLesson = 'eventloopfrou'"
+      >
+      eventloopfrou
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'eventloopfive' }"
+        @click="currentLesson = 'eventloopfive'"
+      >
+      eventloopfive
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'eventloopseven' }"
+        @click="currentLesson = 'eventloopseven'"
+      >
+      eventloopseven
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'eventten' }"
+        @click="currentLesson = 'eventten'"
+      >
+      eventten
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -319,6 +403,21 @@
       <DebounceExplorer v-if="currentLesson === 'debounceexplorer'" />
       <FetchRetry v-if="currentLesson === 'fetchretry'" />
       <AMTAlgorithmVisualization v-if="currentLesson === 'amtalgorithmvisualization'" />
+      <ThisContext v-if="currentLesson === 'thiscontext'" />
+      <ProtoInheitanceExplainer v-if="currentLesson === 'protoinheitanceexplainer'" />
+      <ThisContextExplorer v-if="currentLesson === 'thiscontextexplorer'" />
+      <ThisIsBind v-if="currentLesson === 'thisisbind'" />
+      <ThisPrototypePosition v-if="currentLesson === 'thisprototypeposition'" />
+      <ThisContextJS v-if="currentLesson === 'thiscontextjs'" />
+      <HasOwnPropertyVsinExplainer v-if="currentLesson === 'hasownpropertyvsinexplainer'" />
+      <EventLoop v-if="currentLesson === 'eventloops'" />
+      <EventLoopExplainertwo v-if="currentLesson === 'eventloopexplainertwo'" />
+      <EventLoopthree v-if="currentLesson === 'eventloopthree'" />
+      <EventLoopfrou v-if="currentLesson === 'eventloopfrou'" />
+      <EventLoopFive v-if="currentLesson === 'eventloopfive'" />
+      <EventLoopSeven v-if="currentLesson === 'eventloopseven'" />
+      <EventTen v-if="currentLesson === 'eventten'" />
+      
     </div>
   </div>
 </template>
@@ -370,6 +469,20 @@ import FunctionGet from './components/FunctionGet.vue';
 import DebounceExplorer from './components/DebounceExplorer.vue';
 import FetchRetry from './components/FetchRetry.vue';
 import AMTAlgorithmVisualization from './components/AMTAlgorithmVisualization.vue';
+import ThisContext from './components/ThisContext.vue';
+import ProtoInheitanceExplainer from './components/ProtoInheitanceExplainer.vue';
+import ThisContextExplorer from './components/ThisContextExplorer.vue';
+import ThisIsBind from './components/ThisIsBind.vue';
+import ThisPrototypePosition from './components/ThisPrototypePosition.vue';
+import ThisContextJS from './components/ThisContextJS.vue';
+import HasOwnPropertyVsinExplainer from './components/HasOwnPropertyVsinExplainer.vue';
+import EventLoop from './components/EventLoop.vue';
+import EventLoopExplainertwo from './components/EventLoopExplainertwo.vue';
+import EventLoopthree from './components/EventLoopthree.vue';
+import EventLoopfrou from './components/EventLoopfrou.vue';
+import EventLoopFive from './components/EventLoopFive.vue';
+import EventLoopSeven from './components/EventLoopSeven.vue';
+import EventTen from './components/EventTen.vue';
 const currentLesson = ref('lifecycle');
 </script>
 
