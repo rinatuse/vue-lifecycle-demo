@@ -415,6 +415,42 @@
       >
       stringdeduplicator
       </button>
+      <button 
+        :class="{ active: currentLesson === 'carirovaniedemo' }"
+        @click="currentLesson = 'carirovaniedemo'"
+      >
+      carirovaniedemo
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'infinitycarrirovani' }"
+        @click="currentLesson = 'infinitycarrirovani'"
+      >
+      infinitycarrirovani
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'closureloopexplaine' }"
+        @click="currentLesson = 'closureloopexplaine'"
+      >
+      closureloopexplaine
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'closureloopdemo' }"
+        @click="currentLesson = 'closureloopdemo'"
+      >
+      closureloopdemo
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'clouserdetaileddemo' }"
+        @click="currentLesson = 'clouserdetaileddemo'"
+      >
+      clouserdetaileddemo
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'clouserdemo' }"
+        @click="currentLesson = 'clouserdemo'"
+      >
+      clouserdemo
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -487,6 +523,13 @@
       <SubstringSearchDemo v-if="currentLesson === 'substringsearchDemo'" />
       <CapitalizeDemo v-if="currentLesson === 'capitalizedemo'" />
       <StringDeduplicator v-if="currentLesson === 'stringdeduplicator'" />
+      <CarirovanieDemo v-if="currentLesson === 'carirovaniedemo'" />
+      <InfinityCarrirovani v-if="currentLesson === 'infinitycarrirovani'" />
+      <ClosureLoopExplaine v-if="currentLesson === 'closureloopexplaine'" />
+      <ClosureLoopDemo v-if="currentLesson === 'closureloopdemo'" />
+      <ClouserDetailedDemo v-if="currentLesson === 'clouserdetaileddemo'" />
+      <ClouserDemo v-if="currentLesson === 'clouserdemo'" />
+
 
       
     </div>
@@ -564,6 +607,12 @@ import StringCompression from './components/StringCompression.vue';
 import SubstringSearchDemo from './components/SubstringSearchDemo.vue';
 import CapitalizeDemo from './components/CapitalizeDemo.vue';
 import StringDeduplicator from './components/StringDeduplicator.vue';
+import CarirovanieDemo from './components/CarirovanieDemo.vue';
+import InfinityCarrirovani from './components/InfinityCarrirovani.vue';
+import ClosureLoopExplaine from './components/ClosureLoopExplaine.vue';
+import ClosureLoopDemo from './components/ClosureLoopDemo.vue';
+import ClouserDetailedDemo from './components/ClouserDetailedDemo.vue';
+import ClouserDemo from './components/ClouserDemo.vue';
 const currentLesson = ref('lifecycle');
 </script>
 
