@@ -451,6 +451,18 @@
       >
       clouserdemo
       </button>
+      <button 
+        :class="{ active: currentLesson === 'sleepdemo' }"
+        @click="currentLesson = 'sleepdemo'"
+      >
+      sleepdemo
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'promisealldemo' }"
+        @click="currentLesson = 'promisealldemo'"
+      >
+      promisealldemo
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -529,6 +541,8 @@
       <ClosureLoopDemo v-if="currentLesson === 'closureloopdemo'" />
       <ClouserDetailedDemo v-if="currentLesson === 'clouserdetaileddemo'" />
       <ClouserDemo v-if="currentLesson === 'clouserdemo'" />
+      <SleepDemo v-if="currentLesson === 'sleepdemo'" />
+      <PromiseAllDemo v-if="currentLesson === 'promisealldemo'" />
 
 
       
@@ -613,6 +627,8 @@ import ClosureLoopExplaine from './components/ClosureLoopExplaine.vue';
 import ClosureLoopDemo from './components/ClosureLoopDemo.vue';
 import ClouserDetailedDemo from './components/ClouserDetailedDemo.vue';
 import ClouserDemo from './components/ClouserDemo.vue';
+import SleepDemo from './components/SleepDemo.vue';
+import PromiseAllDemo from './components/PromiseAllDemo.vue';
 const currentLesson = ref('lifecycle');
 </script>
 
