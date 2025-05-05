@@ -463,6 +463,54 @@
       >
       promisealldemo
       </button>
+      <button 
+        :class="{ active: currentLesson === 'promiseanyexplainer' }"
+        @click="currentLesson = 'promiseanyexplainer'"
+      >
+      promiseanyexplainer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'asynclimitdemo' }"
+        @click="currentLesson = 'asynclimitdemo'"
+      >
+      asynclimitdemo
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'tsdemo' }"
+        @click="currentLesson = 'tsdemo'"
+      >
+      tsdemo
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'mypickexplainer' }"
+        @click="currentLesson = 'mypickexplainer'"
+      >
+      mypickexplainer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'typescript' }"
+        @click="currentLesson = 'typescript'"
+      >
+      typescript
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'tskeyof' }"
+        @click="currentLesson = 'tskeyof'"
+      >
+      tskeyof
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'myquestiions' }"
+        @click="currentLesson = 'myquestiions'"
+      >
+      myquestiions
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'interactivejavascript' }"
+        @click="currentLesson = 'interactivejavascript'"
+      >
+      interactivejavascript
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -543,6 +591,14 @@
       <ClouserDemo v-if="currentLesson === 'clouserdemo'" />
       <SleepDemo v-if="currentLesson === 'sleepdemo'" />
       <PromiseAllDemo v-if="currentLesson === 'promisealldemo'" />
+      <PromiseAnyExplainer v-if="currentLesson === 'promiseanyexplainer'" />
+      <AsyncLimitDemo v-if="currentLesson === 'asynclimitdemo'" />
+      <TsDemo v-if="currentLesson === 'tsdemo'" />
+      <MyPickExplainer v-if="currentLesson === 'mypickexplainer'" />
+      <TypeScript v-if="currentLesson === 'typescript'" />
+      <TSKeyof v-if="currentLesson === 'tskeyof'" />
+      <MyQuestiions v-if="currentLesson === 'myquestiions'" />
+      <InteractiveJavaScript v-if="currentLesson === 'interactivejavascript'" />
 
 
       
@@ -629,6 +685,14 @@ import ClouserDetailedDemo from './components/ClouserDetailedDemo.vue';
 import ClouserDemo from './components/ClouserDemo.vue';
 import SleepDemo from './components/SleepDemo.vue';
 import PromiseAllDemo from './components/PromiseAllDemo.vue';
+import PromiseAnyExplainer from './components/PromiseAnyExplainer.vue';
+import AsyncLimitDemo from './components/AsyncLimitDemo.vue';
+import TsDemo from './components/TsDemo.vue';
+import MyPickExplainer from './components/MyPickExplainer.vue';
+import TypeScript from './components/TypeScript.vue';
+import TSKeyof from './components/TSKeyof.vue';
+import MyQuestiions from './components/MyQuestiions.vue';
+import InteractiveJavaScript from './components/InteractiveJavaScript.vue';
 const currentLesson = ref('lifecycle');
 </script>
 
