@@ -511,6 +511,18 @@
       >
       interactivejavascript
       </button>
+      <button 
+        :class="{ active: currentLesson === 'vuerenderingexplorer' }"
+        @click="currentLesson = 'vuerenderingexplorer'"
+      >
+      vuerenderingexplorer
+      </button>
+      <button 
+        :class="{ active: currentLesson === 'eventLooppolyfills' }"
+        @click="currentLesson = 'eventLooppolyfills'"
+      >
+      eventLooppolyfills
+      </button>
     </div>
     
     <div class="lesson-content">
@@ -599,6 +611,8 @@
       <TSKeyof v-if="currentLesson === 'tskeyof'" />
       <MyQuestiions v-if="currentLesson === 'myquestiions'" />
       <InteractiveJavaScript v-if="currentLesson === 'interactivejavascript'" />
+      <VueRenderingExplorer v-if="currentLesson === 'vuerenderingexplorer'" />
+      <EventLoopPolyfills v-if="currentLesson === 'eventLooppolyfills'" />
 
 
       
@@ -693,6 +707,8 @@ import TypeScript from './components/TypeScript.vue';
 import TSKeyof from './components/TSKeyof.vue';
 import MyQuestiions from './components/MyQuestiions.vue';
 import InteractiveJavaScript from './components/InteractiveJavaScript.vue';
+import VueRenderingExplorer from './components/VueRenderingExplorer.vue';
+import EventLoopPolyfills from './components/EventLoopPolyfills.vue';
 const currentLesson = ref('lifecycle');
 </script>
 
