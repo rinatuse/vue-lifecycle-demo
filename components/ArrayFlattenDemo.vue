@@ -1202,7 +1202,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .array-flatten-demo {
     font-family: Arial, sans-serif;
     max-width: 1200px;

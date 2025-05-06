@@ -970,7 +970,7 @@ function performSearch(query) {
 }
 </script>
 
-<style>
+<style scoped>
 .abort-controller-demo {
   font-family: Arial, sans-serif;
   max-width: 1000px;

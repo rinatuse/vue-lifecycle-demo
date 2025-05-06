@@ -392,7 +392,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   .closure-explorer {
     font-family: Arial, sans-serif;
     max-width: 900px;

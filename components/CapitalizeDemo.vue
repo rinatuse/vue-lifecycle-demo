@@ -498,7 +498,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .capitalize-tutorial {
   font-family: Arial, sans-serif;
   max-width: 900px;

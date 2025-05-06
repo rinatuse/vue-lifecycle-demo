@@ -707,7 +707,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   .ts-generics {
     max-width: 1200px;
     margin: 0 auto;

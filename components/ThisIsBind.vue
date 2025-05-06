@@ -202,7 +202,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   .bind-demo {
     font-family: Arial, sans-serif;
     max-width: 900px;

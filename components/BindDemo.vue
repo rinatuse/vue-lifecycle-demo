@@ -492,7 +492,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .bind-polyfill {
     font-family: Arial, sans-serif;
     max-width: 1200px;

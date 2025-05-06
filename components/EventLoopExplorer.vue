@@ -2140,7 +2140,7 @@
   }
   </script>
 
-<style>
+<style scoped>
 /* Основные стили компонента */
 .event-loop-explorer {
   max-width: 1200px;

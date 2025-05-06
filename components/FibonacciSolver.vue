@@ -974,7 +974,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .fibonacci-solver {
     max-width: 1200px;
     margin: 0 auto;

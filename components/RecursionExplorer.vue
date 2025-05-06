@@ -742,7 +742,7 @@
   });
   </script>
   
-  <style>
+  <style scoped>
   .recursion-explorer {
     font-family: 'Arial', sans-serif;
     max-width: 1200px;

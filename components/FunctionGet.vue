@@ -524,7 +524,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   .object-path-explorer {
     font-family: Arial, sans-serif;
     max-width: 960px;

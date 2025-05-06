@@ -574,7 +574,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   .promise-any-explainer {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     color: #333;

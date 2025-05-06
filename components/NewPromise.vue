@@ -2313,7 +2313,7 @@ onMounted(() => {
 });
 </script>
 
-<style>
+<style scoped>
 /* Основные стили */
 .promise-explorer {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;

@@ -258,7 +258,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   .this-explainer {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     max-width: 900px;

@@ -1678,7 +1678,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   .js-concept-explorer {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     max-width: 1200px;

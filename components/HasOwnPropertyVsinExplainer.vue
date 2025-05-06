@@ -760,7 +760,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   /* Общие стили */
   .property-explainer {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;

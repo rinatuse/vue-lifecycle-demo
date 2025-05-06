@@ -1006,7 +1006,7 @@
   });
   </script>
   
-  <style>
+  <style scoped>
   /* ------------ Основные стили ------------ */
   .event-loop-explorer {
     font-family: 'Roboto', 'Segoe UI', sans-serif;

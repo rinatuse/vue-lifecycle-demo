@@ -296,7 +296,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .keyof-demo {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 900px;

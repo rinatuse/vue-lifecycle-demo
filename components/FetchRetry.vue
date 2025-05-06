@@ -618,7 +618,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .retry-fetch-demo {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     max-width: 1200px;

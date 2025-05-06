@@ -2461,7 +2461,7 @@ function switchExample(index) {
 }
 </script>
 
-<style>
+<style scoped>
 .promise-explorer {
   max-width: 1200px;
   margin: 0 auto;

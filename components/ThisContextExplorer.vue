@@ -419,7 +419,7 @@
   const activeSolution = ref(0);
   </script>
   
-  <style>
+  <style scoped>
   .this-context-explorer {
     font-family: Arial, sans-serif;
     max-width: 900px;

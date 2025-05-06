@@ -429,7 +429,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .curry-demo {
     font-family: Arial, sans-serif;
     max-width: 1000px;

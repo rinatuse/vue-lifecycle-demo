@@ -478,7 +478,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .string-compression {
     font-family: Arial, sans-serif;
     max-width: 1000px;

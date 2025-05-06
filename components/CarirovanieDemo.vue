@@ -944,7 +944,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .currying-demo {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     max-width: 1000px;

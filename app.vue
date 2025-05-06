@@ -836,7 +836,7 @@ import EventLoopVideo from './components/EventLoopVideo.vue';
 const currentLesson = ref('lifecycle');
 </script>
 
-<style>
+<style scoped>
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
