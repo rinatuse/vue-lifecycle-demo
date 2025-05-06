@@ -867,6 +867,7 @@
   }
   
   .code-block {
+    color: black;
     margin: 1.5rem 0;
   }
   

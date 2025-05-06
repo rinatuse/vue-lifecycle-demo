@@ -121,7 +121,7 @@
       <div class="implementation-container">
         <h2>Реализация</h2>
         <div class="code-container">
-          <pre><code>function checkBrackets(str) {
+          <pre><code style="color: black">function checkBrackets(str) {
     const stack = [];
     const brackets = {
       ')': '(',

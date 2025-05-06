@@ -297,6 +297,12 @@
           >
             Event Loop Polyfills
           </button>
+          <button 
+            :class="{ active: currentLesson === 'eventloopvideo' }"
+            @click="currentLesson = 'eventloopvideo'"
+          >
+          EventLoopVideo
+          </button>
         </div>
       </div>
 
@@ -478,6 +484,24 @@
             @click="currentLesson = 'amtalgorithmvisualization'"
           >
             AMT Алгоритм
+          </button>
+          <button 
+            :class="{ active: currentLesson === 'twosumnewmap' }"
+            @click="currentLesson = 'twosumnewmap'"
+          >
+          twosumnewmap
+          </button>
+          <button 
+            :class="{ active: currentLesson === 'complementmapnew' }"
+            @click="currentLesson = 'complementmapnew'"
+          >
+          complementmapnew
+          </button>
+          <button 
+            :class="{ active: currentLesson === 'groupelemnt' }"
+            @click="currentLesson = 'groupelemnt'"
+          >
+          groupelemnt
           </button>
         </div>
       </div>
@@ -703,6 +727,11 @@
       <NewPromise v-if="currentLesson === 'newpromise'" />
       <ClousersDemoDemo v-if="currentLesson === 'clouserdemodemo'" />
       <AbortControllerDemo v-if="currentLesson === 'abortcontrollerdemo'" />
+      <TwoSumNewMap v-if="currentLesson === 'twosumnewmap'" />
+      <ComplementMapNew v-if="currentLesson === 'complementmapnew'" />
+      <GroupElemnt v-if="currentLesson === 'groupelemnt'" />
+      <EventLoopVideo v-if="currentLesson === 'eventloopvideo'" />
+
     </div>
   </div>
 </template>
@@ -799,6 +828,10 @@ import EventLoopPolyfills from './components/EventLoopPolyfills.vue';
 import NewPromise from './components/NewPromise.vue';
 import ClousersDemoDemo from './components/ClousersDemoDemo.vue';
 import AbortControllerDemo from './components/AbortControllerDemo.vue';
+import TwoSumNewMap from './components/TwoSumNewMap.vue';
+import ComplementMapNew from './components/ComplementMapNew.vue';
+import GroupElemnt from './components/GroupElemnt.vue';
+import EventLoopVideo from './components/EventLoopVideo.vue';
 
 const currentLesson = ref('lifecycle');
 </script>
